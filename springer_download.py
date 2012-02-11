@@ -60,7 +60,7 @@ def main(argv):
             if hash != "":
                 usage()
                 error("-c and -l arguments are mutually exclusive")
-            match = re.match("(https?://)?(www\.)?springer(link)?.(com|de)/(content|.*book)/(?P<hash>[a-z0-9\-]+)/?(\?[^/]*)?$", arg)
+            match = re.match("(https?://)?(www\.)?springer(link)?.(com|de)/(content|.*book)/(?P<hash>[a-z0-9\-]+)(.*)?$", arg)
             if not match:
                 usage()
                 error("Bad link given. See example link.")
